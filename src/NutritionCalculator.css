@@ -1,0 +1,353 @@
+
+/* ==============================
+   GREENBITE NUTRITION CALCULATOR
+   ============================== */
+
+.nutrition-calculator {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 35px 24px 50px;
+  color: #e5f5e9;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+/* Calculator heading */
+
+.calculator-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.calculator-icon {
+  display: inline-flex;
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #315b3d;
+  border-radius: 18px;
+  background: #153b25;
+  font-size: 30px;
+}
+
+.calculator-eyebrow {
+  margin: 0 0 8px;
+  color: #4ade80;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.calculator-heading h2 {
+  margin: 0 0 12px;
+  color: #f0fdf4;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.2;
+}
+
+.calculator-description {
+  max-width: 700px;
+  margin: 0;
+  color: #a8c4af;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Calculator form */
+
+.calculator-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.form-group label {
+  color: #e5f5e9;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.form-group select,
+.form-group input {
+  width: 100%;
+  min-height: 49px;
+  padding: 13px 15px;
+  border: 1px solid #31543b;
+  border-radius: 12px;
+  outline: none;
+  background: #102c1c;
+  color: #f0fdf4;
+  font-family: inherit;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+.form-group select option {
+  background: #102c1c;
+  color: #f0fdf4;
+}
+
+.form-group input::placeholder {
+  color: #8ba995;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+  border-color: #4ade80;
+  box-shadow: 0 0 0 3px rgb(74 222 128 / 12%);
+}
+
+.form-group small {
+  color: #8ba995;
+  font-size: 12px;
+}
+
+/* Selected food */
+
+.selected-food {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 20px;
+  margin-bottom: 18px;
+  border: 1px solid #254b31;
+  border-radius: 18px;
+  background: #0d281a;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 10%);
+}
+
+.selected-food span {
+  color: #a8c4af;
+  font-size: 12px;
+}
+
+.selected-food strong {
+  color: #f0fdf4;
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.selected-food small {
+  color: #8ba995;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Main calorie result */
+
+.calorie-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 30px 20px;
+  margin-bottom: 18px;
+  border: 1px solid #315b3d;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #153b25, #102c1c);
+  text-align: center;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 10%);
+}
+
+.calorie-result span:first-child {
+  color: #a8c4af;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.calorie-result strong {
+  color: #4ade80;
+  font-size: clamp(36px, 6vw, 48px);
+  font-weight: 800;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.calorie-result span:last-child {
+  color: #86efac;
+  font-size: 13px;
+}
+
+/* Protein, carbohydrate and fat cards */
+
+.nutrition-results {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.nutrient-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #254b31;
+  border-radius: 18px;
+  background: #0d281a;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 10%);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.nutrient-card:hover {
+  transform: translateY(-3px);
+  border-color: #4ade80;
+  box-shadow: 0 12px 28px rgb(0 0 0 / 18%);
+}
+
+.nutrient-card > span {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: #1b4229;
+  font-size: 23px;
+}
+
+.nutrient-card p {
+  margin: 15px 0 8px;
+  color: #a8c4af;
+  font-size: 13px;
+}
+
+.nutrient-card strong {
+  color: #4ade80;
+  font-size: clamp(16px, 2.5vw, 21px);
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+/* Input validation */
+
+.calculator-error {
+  padding: 14px 16px;
+  margin: 18px 0 0;
+  border: 1px solid #7f3434;
+  border-radius: 12px;
+  background: #351b1b;
+  color: #fecaca;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Disclaimer */
+
+.calculator-disclaimer {
+  margin: 25px 0 0;
+  padding: 16px 18px;
+  border: 1px solid #31543b;
+  border-radius: 12px;
+  background: #102c1c;
+  color: #b6cdbb;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* Keyboard accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .nutrient-card,
+  .form-group select,
+  .form-group input {
+    transition: none;
+  }
+
+  .nutrient-card:hover {
+    transform: none;
+  }
+}
+
+/* Responsive layout */
+
+@media (max-width: 900px) {
+  .nutrition-results {
+    gap: 12px;
+  }
+
+  .nutrient-card {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nutrition-calculator {
+    padding: 25px 16px 35px;
+  }
+
+  .calculator-heading {
+    gap: 13px;
+    margin-bottom: 25px;
+  }
+
+  .calculator-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 15px;
+    font-size: 25px;
+  }
+
+  .calculator-heading h2 {
+    font-size: 29px;
+  }
+
+  .calculator-form {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .nutrition-results {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .nutrient-card {
+    display: grid;
+    grid-template-columns: 44px 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .nutrient-card p {
+    margin: 0;
+  }
+
+  .nutrient-card strong {
+    text-align: right;
+    font-size: 16px;
+  }
+
+  .selected-food {
+    padding: 17px;
+  }
+
+  .calorie-result {
+    padding: 25px 16px;
+  }
+}

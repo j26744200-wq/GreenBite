@@ -1,0 +1,452 @@
+/* =====================================
+   GREENBITE - MEAL IDEAS
+   ===================================== */
+
+.meal-ideas {
+  width: 100%;
+  color: #e5f5e9;
+}
+
+/* Page heading */
+
+.meal-ideas-heading {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.meal-ideas-icon {
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  flex-shrink: 0;
+  border: 1px solid #285c3b;
+  border-radius: 22px;
+  background: #123522;
+  font-size: 38px;
+}
+
+.meal-ideas-eyebrow {
+  display: block;
+  margin-bottom: 8px;
+  color: #4ade80;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.meal-ideas-heading h2 {
+  margin: 0 0 8px;
+  color: #f0fff4;
+  font-size: 34px;
+}
+
+.meal-ideas-heading p {
+  max-width: 650px;
+  margin: 0;
+  color: #a8c7b1;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Search and filters */
+
+.meal-ideas-filters {
+  display: grid;
+  grid-template-columns: minmax(220px, 2fr) minmax(130px, 1fr) minmax(150px, 1fr);
+  gap: 16px;
+  align-items: end;
+  margin-bottom: 22px;
+  padding: 22px;
+  border: 1px solid #214631;
+  border-radius: 18px;
+  background: #0d281a;
+}
+
+.meal-ideas-filters > label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+  color: #b7d8c0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.meal-ideas-search {
+  position: relative;
+}
+
+.meal-ideas-search > span {
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  transform: translateY(-50%);
+  font-size: 16px;
+}
+
+.meal-ideas-filters input,
+.meal-ideas-filters select {
+  width: 100%;
+  min-width: 0;
+  height: 46px;
+  padding: 0 13px;
+  border: 1px solid #315940;
+  border-radius: 11px;
+  outline: none;
+  background: #081c12;
+  color: #f0fff4;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.meal-ideas-filters .meal-ideas-search input {
+  padding-left: 40px;
+}
+
+.meal-ideas-filters input::placeholder {
+  color: #789b84;
+}
+
+.meal-ideas-filters input:focus,
+.meal-ideas-filters select:focus {
+  border-color: #4ade80;
+  box-shadow: 0 0 0 3px rgb(74 222 128 / 10%);
+}
+
+.meal-ideas-filters select option {
+  background: #0d281a;
+  color: #f0fff4;
+}
+
+/* Result count */
+
+.meal-ideas-count {
+  margin: 0 0 18px;
+  color: #91b69c;
+  font-size: 13px;
+}
+
+/* Meal cards */
+
+.meal-ideas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.meal-idea-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid #214631;
+  border-radius: 19px;
+  background: linear-gradient(145deg, #103321, #0a2115);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.meal-idea-card:hover {
+  transform: translateY(-4px);
+  border-color: #398653;
+  box-shadow: 0 12px 28px rgb(0 0 0 / 15%);
+}
+
+.meal-idea-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.meal-idea-emoji {
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  border: 1px solid #285c3b;
+  border-radius: 17px;
+  background: #123522;
+  font-size: 34px;
+}
+
+.meal-idea-time {
+  padding: 8px 10px;
+  border: 1px solid #285c3b;
+  border-radius: 20px;
+  background: #0a2417;
+  color: #a8c7b1;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+/* Category and diet labels */
+
+.meal-idea-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 13px;
+}
+
+.meal-idea-tags span {
+  padding: 6px 10px;
+  border: 1px solid #285c3b;
+  border-radius: 20px;
+  background: #123522;
+  color: #86efac;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* Card text */
+
+.meal-idea-card h3 {
+  margin: 0 0 10px;
+  color: #f0fff4;
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.meal-idea-card > p {
+  flex: 1;
+  margin: 0 0 22px;
+  color: #a8c7b1;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Recipe button */
+
+.meal-idea-details-button {
+  width: 100%;
+  min-height: 43px;
+  padding: 10px 14px;
+  border: 1px solid #315940;
+  border-radius: 10px;
+  background: #123522;
+  color: #4ade80;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.meal-idea-details-button:hover {
+  border-color: #4ade80;
+  background: #19482c;
+}
+
+.meal-idea-details-button:focus-visible,
+.meal-ideas-close:focus-visible {
+  outline: 2px solid #4ade80;
+  outline-offset: 3px;
+}
+
+/* No results */
+
+.meal-ideas-empty {
+  padding: 45px 20px;
+  border: 1px dashed #315940;
+  border-radius: 18px;
+  background: #0d281a;
+  text-align: center;
+}
+
+.meal-ideas-empty > span {
+  font-size: 38px;
+}
+
+.meal-ideas-empty h3 {
+  margin: 14px 0 8px;
+  color: #f0fff4;
+}
+
+.meal-ideas-empty p {
+  margin: 0;
+  color: #91b69c;
+  font-size: 13px;
+}
+
+/* Recipe popup overlay */
+
+.meal-ideas-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 24px;
+  background: rgb(0 0 0 / 75%);
+  backdrop-filter: blur(5px);
+}
+
+/* Recipe popup */
+
+.meal-ideas-modal {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 32px;
+  border: 1px solid #315940;
+  border-radius: 22px;
+  background: #0d281a;
+  color: #e5f5e9;
+  box-shadow: 0 24px 70px rgb(0 0 0 / 35%);
+}
+
+.meal-ideas-close {
+  position: absolute;
+  top: 15px;
+  right: 17px;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #315940;
+  border-radius: 10px;
+  background: #123522;
+  color: #e5f5e9;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.meal-ideas-modal > .meal-ideas-eyebrow {
+  padding-right: 40px;
+}
+
+.meal-ideas-modal h3 {
+  margin: 18px 35px 12px 0;
+  color: #f0fff4;
+  font-size: 26px;
+  line-height: 1.4;
+}
+
+.meal-ideas-modal-description {
+  color: #a8c7b1;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.meal-ideas-modal-meta {
+  margin: 18px 0 25px;
+  padding: 12px;
+  border: 1px solid #285c3b;
+  border-radius: 10px;
+  background: #0a2417;
+  color: #4ade80;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.meal-ideas-modal h4 {
+  margin: 24px 0 12px;
+  color: #4ade80;
+  font-size: 16px;
+}
+
+.meal-ideas-ingredients,
+.meal-ideas-instructions {
+  padding-left: 23px;
+  color: #c1ddc9;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.meal-ideas-ingredients li,
+.meal-ideas-instructions li {
+  padding-left: 4px;
+  margin-bottom: 5px;
+}
+
+.meal-ideas-note {
+  margin-top: 25px;
+  padding-top: 17px;
+  border-top: 1px solid #214631;
+  color: #91b69c;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .meal-ideas-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .meal-ideas-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .meal-ideas-search {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .meal-ideas-heading {
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .meal-ideas-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 15px;
+    font-size: 29px;
+  }
+
+  .meal-ideas-heading h2 {
+    font-size: 27px;
+  }
+
+  .meal-ideas-heading p {
+    font-size: 13px;
+  }
+
+  .meal-ideas-filters {
+    grid-template-columns: 1fr;
+    padding: 17px;
+  }
+
+  .meal-ideas-search {
+    grid-column: auto;
+  }
+
+  .meal-ideas-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .meal-idea-card {
+    padding: 19px;
+  }
+
+  .meal-ideas-modal {
+    padding: 24px 19px;
+  }
+
+  .meal-ideas-modal h3 {
+    font-size: 22px;
+  }
+
+  .meal-ideas-overlay {
+    align-items: flex-start;
+    padding: 15px;
+  }
+}   
